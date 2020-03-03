@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IF statements</title>
+    <style>
+
+        #output{
+            max-width: 400px;
+            margin: 2em auto;
+            padding: 1em;
+            border: 1px solid #ccc;
+            background-color: #eee;
+            font-size: 1.3em;
+        }
+        
+        .error{
+            padding: 10px;
+            border: 1px solid #cc3333;
+            border-radius: 10px;
+            background-color: #fcc;
+            color: #900;
+            box-shadow: 0 0 15px rgba(255,0,0,0.8);
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>If statements</h1>
+
+    <div id="output"></div>
+    
+
+    <script>
+
+        "use strict";
+
+        // const just set the output variable reference to the div, but the innerHTML can still change the text in the div
+        const output = document.getElementById("output");
+        // output.innerHTML = "123"
+
+        // let age=prompt(`How old are you?`);
+        // if (age >110) {
+        //     output.innerHTML+= `<p>You are so dead, you ${age} year-old zombie</p>`;
+        // }
+        // else if (age >= 50) {
+        //     output.innerHTML += `<p>Welcome to APIA!</p> <p>${age} is old enough</p>`;
+        // }
+        // else {
+        //     output.innerHTML += `<p>Welcome to APIA</p> <p>Get outta here, you young whipper-snapper!</p>`;
+        // }
+
+        // let userName = prompt("Gimme your name");
+        // if (userName.toLowerCase() === "jimmy") {
+        //     output.innerHTML += `<p>Hey man, I am so glad it's you!</p>`;
+        // }
+        // // if (userName === "Jimmy" || userName === "jimmy" || userName ==="JIMMY") {
+        // //     output.innerHTML += `<p>Hey man, I am so glad it's you!</p>`;
+        // // }
+        // else {
+        //     output.innerHTML += `<p>You are not welcome</p>`;
+        // }
+
+        let mark = prompt("Enter your mark (0-100): ");
+        if (mark < 0 || mark >100){
+            output.innerHTML += `<p class="error">Invalid mark, enter the mark in 0-100 range!!!</p>`;
+        }
+        else if (mark == null) {
+            output.innerHTML += `<p class="error">No mark is entered</p>`;
+        }
+        else if (mark == "") {
+            output.innerHTML += `<p class="error">No mark detected</p>`;
+        }
+        else if (mark < 50) {
+            output.innerHTML += "<p>Fail</p>";
+        }
+        else if (mark < 70) {
+            output.innerHTML += "<p>C Pass</p>";
+        }
+        else if (mark < 83) {
+            output.innerHTML += "<p>B Pass</p>";
+        }
+        else if (mark <=100) {
+            output.innerHTML += "<p>A Pass</p>";
+        }
+        else {
+            output.innerHTML += `<p class="error">Invalid input</p>`;
+        }
+
+    </script>
+
+</body>
+</html>
