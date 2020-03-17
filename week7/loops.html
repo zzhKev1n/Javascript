@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    #div{
+        width: 300px;
+        margin: auto;
+        border: 2px solid black;
+        padding: 20px;
+    }
+</style>
+
+<body>
+
+    <div id="div"></div>
+
+    <script>
+        let output = document.getElementById("div")
+
+        // for (let i = 1; i <= 3; ++i){
+        //     for (let j = 1; j <= 5; ++j){
+        //         console.log(i, j);
+        //     }
+        // }
+
+        
+        // let html = ""
+        // for (let teamCounter = 1; teamCounter <= 3; ++teamCounter){
+        //     teamName = prompt("Enter the name of team " + teamCounter + ": ")
+        //     html += `<h2>Team ${teamCounter}: ${teamName}</h2>`
+        //     for (let memberCounter = 1; memberCounter <= 3; ++memberCounter){
+        //         let memberName = prompt("Enter member "+ memberCounter+ " in the " + teamCounter+ " team: ")
+        //         html += `<p>Team member ${memberCounter}: ${memberName}</p>`
+        //     }
+        // }
+        // output.innerHTML += html
+        
+        
+        // while (true){
+        //     let mark = prompt(`Enter a mark or enter 'stop' to stop: `);
+        //     if (mark.trim().toLocaleLowerCase() === "stop"){
+        //         break
+        //     }
+        //     output.innerHTML += `<p>Mark is: ${mark}</p>`
+        // }
+
+        while (true){
+            let mark = prompt(`Enter a mark or enter 'stop' to stop: `);
+            if (mark === null){
+                break
+            }
+            output.innerHTML += `<p>Mark is: ${mark}</p>`
+        }
+
+    </script>
+
+</body>
+</html>
